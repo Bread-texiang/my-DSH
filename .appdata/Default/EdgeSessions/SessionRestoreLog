@@ -1,0 +1,8 @@
+{"logTime": "1031/063358", "session": "START"}
+{"logTime": "1031/063602", "session": "END"}
+{"logTime": "1031/073939", "session": "START"}
+{"logTime": "1031/074359", "level": "INFO", "location": "components\\sessions\\core\\command_storage_manager.cc:275 operator()", "message": "No valid session file found: SessionRestore"}
+{"logTime": "1031/074359", "level": "INFO", "location": "components\\sessions\\core\\command_storage_manager.cc:275 operator()", "message": "Last session file not found for SessionType : SessionRestore"}
+{"logTime": "1031/074824", "session": "END"}
+{"logTime": "1031/075233", "session": "START"}
+{"logTime": "1031/075239", "session": "END"}

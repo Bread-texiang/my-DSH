@@ -1,0 +1,984 @@
+:host {
+  --quark-style-black-color: #000;
+  --quark-style-font-white-color: #fff;
+  --quark-style-gray-color: #060A26;
+  --quark-style-gray-10-color: rgba(6,10,38,0.06);
+  --quark-style-gray-20-color: rgba(6,10,38,0.12);
+  --quark-style-gray-30-color: rgba(6,10,38,0.24);
+  --quark-style-gray-40-color: rgba(6,10,38,0.4);
+  --quark-style-gray-50-color: rgba(6,10,38,0.5);
+  --quark-style-gray-60-color: rgba(6,10,38,0.6);
+  --quark-style-gray-70-color: rgba(6,10,38,0.7);
+  --quark-style-gray-80-color: rgba(6,10,38,0.8);
+  --quark-style-gray-90-color: rgba(6,10,38,0.9);
+  --quark-style-gray-10-opaque-color: #F0F1F2;
+  --quark-style-gray-20-opaque-color: #E1E2E5;
+  --quark-style-gray-30-opaque-color: #C3C4CB;
+  --quark-style-gray-40-opaque-color: #9C9DA9;
+  --quark-style-gray-50-opaque-color: #828492;
+  --quark-style-gray-60-opaque-color: #696C7D;
+  --quark-style-gray-70-opaque-color: #505367;
+  --quark-style-gray-80-opaque-color: #383B51;
+  --quark-style-gray-90-opaque-color: #1F223C;
+  --quark-style-ash-color: #F7F8FA;
+  --quark-style-ash-10-color: rgba(247,248,250,0.1);
+  --quark-style-ash-20-color: rgba(247,248,250,0.2);
+  --quark-style-ash-30-color: rgba(247,248,250,0.3);
+  --quark-style-ash-40-color: rgba(247,248,250,0.4);
+  --quark-style-ash-50-color: rgba(247,248,250,0.5);
+  --quark-style-ash-60-color: rgba(247,248,250,0.6);
+  --quark-style-ash-70-color: rgba(247,248,250,0.7);
+  --quark-style-ash-80-color: rgba(247,248,250,0.8);
+  --quark-style-ash-90-color: rgba(247,248,250,0.9);
+  --quark-style-ash-blue-color: #F3FBFF;
+  --quark-style-ash-blue-50-color: rgba(230,247,255,0.5);
+  --quark-style-ash-orange-color: #FFF9F8;
+  --quark-style-ash-orange-50-color: rgba(255,243,240,0.5);
+  --quark-style-ash-purple-color: #F9F7FF;
+  --quark-style-ash-purple-50-color: rgba(242,240,255,0.5);
+  --quark-style-ash-theme-color: #F7F9FF;
+  --quark-style-ash-theme-50-color: rgba(240,242,255,0.5);
+  --quark-style-white-color: #fff;
+  --quark-style-white-10-color: rgba(255,255,255,0.1);
+  --quark-style-white-20-color: rgba(255,255,255,0.2);
+  --quark-style-white-30-color: rgba(255,255,255,0.3);
+  --quark-style-white-40-color: rgba(255,255,255,0.4);
+  --quark-style-white-50-color: rgba(255,255,255,0.5);
+  --quark-style-white-60-color: rgba(255,255,255,0.6);
+  --quark-style-white-70-color: rgba(255,255,255,0.7);
+  --quark-style-white-80-color: rgba(255,255,255,0.8);
+  --quark-style-white-90-color: rgba(255,255,255,0.9);
+  --quark-style-white-button-color: #fff;
+  --quark-style-blue-color: #119BFF;
+  --quark-style-blue-10-color: rgba(17,155,255,0.07);
+  --quark-style-blue-20-color: rgba(17,155,255,0.18);
+  --quark-style-blue-50-color: rgba(17,155,255,0.5);
+  --quark-style-orange-color: #FF6B3F;
+  --quark-style-orange-10-color: rgba(255,107,63,0.07);
+  --quark-style-orange-20-color: rgba(255,147,115,0.2);
+  --quark-style-orange-50-color: rgba(255,107,63,0.5);
+  --quark-style-purple-color: #432CDB;
+  --quark-style-purple-10-color: rgba(67,44,219,0.07);
+  --quark-style-purple-20-color: rgba(67,44,219,0.18);
+  --quark-style-purple-50-color: rgba(67,44,219,0.5);
+  --quark-style-red-color: #FF4040;
+  --quark-style-theme-color: #0D53FF;
+  --quark-style-theme-10-color: rgba(13,83,255,0.07);
+  --quark-style-theme-20-color: rgba(13,83,255,0.18);
+  --quark-style-theme-50-color: rgba(13,83,255,0.5);
+  --quark-style-cyan-color: #29BECC;
+  --quark-style-cyan-10-color: rgba(41,190,204,0.1);
+  --quark-style-cyan-20-color: rgba(41,190,204,0.2);
+  --quark-style-cyan-50-color: rgba(41,190,204,0.5);
+  --quark-style-sea-blue-color: #4D80FF;
+  --quark-style-sea-blue-10-color: rgba(77,128,255,0.1);
+  --quark-style-sea-blue-20-color: rgba(77,128,255,0.2);
+  --quark-style-sea-blue-50-color: rgba(77,128,255,0.5);
+  --quark-style-dark-black-color: #fff;
+  --quark-style-dark-font-white-color: #000;
+  --quark-style-dark-gray-color: #FAFBFF;
+  --quark-style-dark-gray-10-color: rgba(250,251,255,0.12);
+  --quark-style-dark-gray-20-color: rgba(250,251,255,0.2);
+  --quark-style-dark-gray-30-color: rgba(250,251,255,0.3);
+  --quark-style-dark-gray-40-color: rgba(250,251,255,0.4);
+  --quark-style-dark-gray-50-color: rgba(250,251,255,0.5);
+  --quark-style-dark-gray-60-color: rgba(250,251,255,0.6);
+  --quark-style-dark-gray-70-color: rgba(250,251,255,0.7);
+  --quark-style-dark-gray-80-color: rgba(250,251,255,0.8);
+  --quark-style-dark-gray-90-color: rgba(250,251,255,0.9);
+  --quark-style-dark-gray-10-opaque-color: #19191A;
+  --quark-style-dark-gray-20-opaque-color: #323233;
+  --quark-style-dark-gray-30-opaque-color: #4B4B4C;
+  --quark-style-dark-gray-40-opaque-color: #646466;
+  --quark-style-dark-gray-50-opaque-color: #7D7E80;
+  --quark-style-dark-gray-60-opaque-color: #969699;
+  --quark-style-dark-gray-70-opaque-color: #AFAFB2;
+  --quark-style-dark-gray-80-opaque-color: #C8C9CC;
+  --quark-style-dark-gray-90-opaque-color: #E1E2E6;
+  --quark-style-dark-ash-color: #2B2D33;
+  --quark-style-dark-ash-10-color: rgba(43,45,51,0.1);
+  --quark-style-dark-ash-20-color: rgba(43,45,51,0.2);
+  --quark-style-dark-ash-30-color: rgba(43,45,51,0.3);
+  --quark-style-dark-ash-40-color: rgba(43,45,51,0.4);
+  --quark-style-dark-ash-50-color: rgba(43,45,51,0.5);
+  --quark-style-dark-ash-60-color: rgba(43,45,51,0.6);
+  --quark-style-dark-ash-70-color: rgba(43,45,51,0.7);
+  --quark-style-dark-ash-80-color: rgba(43,45,51,0.8);
+  --quark-style-dark-ash-90-color: rgba(43,45,51,0.9);
+  --quark-style-dark-ash-blue-color: #293033;
+  --quark-style-dark-ash-blue-50-color: rgba(71,92,102,0.5);
+  --quark-style-dark-ash-orange-color: #332F2E;
+  --quark-style-dark-ash-orange-50-color: rgba(102,94,92,0.5);
+  --quark-style-dark-ash-purple-color: #2A2933;
+  --quark-style-dark-ash-purple-50-color: rgba(76,71,102,0.5);
+  --quark-style-dark-ash-theme-color: #262833;
+  --quark-style-dark-ash-theme-50-color: rgba(66,72,102,0.5);
+  --quark-style-dark-white-color: #363840;
+  --quark-style-dark-white-10-color: rgba(54,56,64,0.1);
+  --quark-style-dark-white-20-color: rgba(54,56,64,0.2);
+  --quark-style-dark-white-30-color: rgba(54,56,64,0.3);
+  --quark-style-dark-white-40-color: rgba(54,56,64,0.4);
+  --quark-style-dark-white-50-color: rgba(54,56,64,0.5);
+  --quark-style-dark-white-60-color: rgba(54,56,64,0.6);
+  --quark-style-dark-white-70-color: rgba(54,56,64,0.7);
+  --quark-style-dark-white-80-color: rgba(54,56,64,0.8);
+  --quark-style-dark-white-90-color: rgba(54,56,64,0.9);
+  --quark-style-dark-white-button-color: #585961;
+  --quark-style-dark-blue-color: #66BFFF;
+  --quark-style-dark-blue-10-color: rgba(102,191,255,0.15);
+  --quark-style-dark-blue-20-color: rgba(102,191,255,0.24);
+  --quark-style-dark-blue-50-color: rgba(102,191,255,0.5);
+  --quark-style-dark-orange-color: #FF764D;
+  --quark-style-dark-orange-10-color: rgba(255,118,77,0.12);
+  --quark-style-dark-orange-20-color: rgba(255,118,77,0.22);
+  --quark-style-dark-orange-50-color: rgba(255,118,77,0.5);
+  --quark-style-dark-purple-color: #A699FF;
+  --quark-style-dark-purple-10-color: rgba(189,179,255,0.15);
+  --quark-style-dark-purple-20-color: rgba(189,179,255,0.24);
+  --quark-style-dark-purple-50-color: rgba(166,153,255,0.5);
+  --quark-style-dark-red-color: #FF4D4D;
+  --quark-style-dark-theme-color: #6691FF;
+  --quark-style-dark-theme-10-color: rgba(102,145,255,0.15);
+  --quark-style-dark-theme-20-color: rgba(102,145,255,0.24);
+  --quark-style-dark-theme-50-color: rgba(102,145,255,0.5);
+  --quark-style-dark-cyan-color: #91EAF2;
+  --quark-style-dark-cyan-10-color: rgba(145,234,242,0.1);
+  --quark-style-dark-cyan-20-color: rgba(145,234,242,0.2);
+  --quark-style-dark-cyan-50-color: rgba(145,234,242,0.5);
+  --quark-style-dark-sea-blue-color: #739BFF;
+  --quark-style-dark-sea-blue-10-color: rgba(115,155,255,0.1);
+  --quark-style-dark-sea-blue-20-color: rgba(115,155,255,0.2);
+  --quark-style-dark-sea-blue-50-color: rgba(115,155,255,0.5);
+  --quark-style-black-fixed-color: #000;
+  --quark-style-gray-10-fixed-color: rgba(6,10,38,0.06);
+  --quark-style-gray-20-fixed-color: rgba(6,10,38,0.12);
+  --quark-style-gray-30-fixed-color: rgba(6,10,38,0.24);
+  --quark-style-gray-40-fixed-color: rgba(6,10,38,0.4);
+  --quark-style-gray-50-fixed-color: rgba(6,10,38,0.5);
+  --quark-style-gray-60-fixed-color: rgba(6,10,38,0.6);
+  --quark-style-gray-70-fixed-color: rgba(6,10,38,0.7);
+  --quark-style-gray-80-fixed-color: rgba(6,10,38,0.8);
+  --quark-style-gray-90-fixed-color: rgba(6,10,38,0.9);
+  --quark-style-gray-fixed-color: #060A26;
+  --quark-style-transparent-fixed-color: rgba(255,255,255,0);
+  --quark-style-white-fixed-color: #fff;;
+}
+
+@media (prefers-color-scheme: dark) {
+  :host {
+    --quark-style-black-color: var(--quark-style-dark-black-color);
+    --quark-style-font-white-color: var(--quark-style-dark-font-white-color);
+    --quark-style-gray-color: var(--quark-style-dark-gray-color);
+    --quark-style-gray-10-color: var(--quark-style-dark-gray-10-color);
+    --quark-style-gray-20-color: var(--quark-style-dark-gray-20-color);
+    --quark-style-gray-30-color: var(--quark-style-dark-gray-30-color);
+    --quark-style-gray-40-color: var(--quark-style-dark-gray-40-color);
+    --quark-style-gray-50-color: var(--quark-style-dark-gray-50-color);
+    --quark-style-gray-60-color: var(--quark-style-dark-gray-60-color);
+    --quark-style-gray-70-color: var(--quark-style-dark-gray-70-color);
+    --quark-style-gray-80-color: var(--quark-style-dark-gray-80-color);
+    --quark-style-gray-90-color: var(--quark-style-dark-gray-90-color);
+    --quark-style-gray-10-opaque-color: var(--quark-style-dark-gray-10-opaque-color);
+    --quark-style-gray-20-opaque-color: var(--quark-style-dark-gray-20-opaque-color);
+    --quark-style-gray-30-opaque-color: var(--quark-style-dark-gray-30-opaque-color);
+    --quark-style-gray-40-opaque-color: var(--quark-style-dark-gray-40-opaque-color);
+    --quark-style-gray-50-opaque-color: var(--quark-style-dark-gray-50-opaque-color);
+    --quark-style-gray-60-opaque-color: var(--quark-style-dark-gray-60-opaque-color);
+    --quark-style-gray-70-opaque-color: var(--quark-style-dark-gray-70-opaque-color);
+    --quark-style-gray-80-opaque-color: var(--quark-style-dark-gray-80-opaque-color);
+    --quark-style-gray-90-opaque-color: var(--quark-style-dark-gray-90-opaque-color);
+    --quark-style-ash-color: var(--quark-style-dark-ash-color);
+    --quark-style-ash-10-color: var(--quark-style-dark-ash-10-color);
+    --quark-style-ash-20-color: var(--quark-style-dark-ash-20-color);
+    --quark-style-ash-30-color: var(--quark-style-dark-ash-30-color);
+    --quark-style-ash-40-color: var(--quark-style-dark-ash-40-color);
+    --quark-style-ash-50-color: var(--quark-style-dark-ash-50-color);
+    --quark-style-ash-60-color: var(--quark-style-dark-ash-60-color);
+    --quark-style-ash-70-color: var(--quark-style-dark-ash-70-color);
+    --quark-style-ash-80-color: var(--quark-style-dark-ash-80-color);
+    --quark-style-ash-90-color: var(--quark-style-dark-ash-90-color);
+    --quark-style-ash-blue-color: var(--quark-style-dark-ash-blue-color);
+    --quark-style-ash-blue-50-color: var(--quark-style-dark-ash-blue-50-color);
+    --quark-style-ash-orange-color: var(--quark-style-dark-ash-orange-color);
+    --quark-style-ash-orange-50-color: var(--quark-style-dark-ash-orange-50-color);
+    --quark-style-ash-purple-color: var(--quark-style-dark-ash-purple-color);
+    --quark-style-ash-purple-50-color: var(--quark-style-dark-ash-purple-50-color);
+    --quark-style-ash-theme-color: var(--quark-style-dark-ash-theme-color);
+    --quark-style-ash-theme-50-color: var(--quark-style-dark-ash-theme-50-color);
+    --quark-style-white-color: var(--quark-style-dark-white-color);
+    --quark-style-white-10-color: var(--quark-style-dark-white-10-color);
+    --quark-style-white-20-color: var(--quark-style-dark-white-20-color);
+    --quark-style-white-30-color: var(--quark-style-dark-white-30-color);
+    --quark-style-white-40-color: var(--quark-style-dark-white-40-color);
+    --quark-style-white-50-color: var(--quark-style-dark-white-50-color);
+    --quark-style-white-60-color: var(--quark-style-dark-white-60-color);
+    --quark-style-white-70-color: var(--quark-style-dark-white-70-color);
+    --quark-style-white-80-color: var(--quark-style-dark-white-80-color);
+    --quark-style-white-90-color: var(--quark-style-dark-white-90-color);
+    --quark-style-white-button-color: var(--quark-style-dark-white-button-color);
+    --quark-style-blue-color: var(--quark-style-dark-blue-color);
+    --quark-style-blue-10-color: var(--quark-style-dark-blue-10-color);
+    --quark-style-blue-20-color: var(--quark-style-dark-blue-20-color);
+    --quark-style-blue-50-color: var(--quark-style-dark-blue-50-color);
+    --quark-style-orange-color: var(--quark-style-dark-orange-color);
+    --quark-style-orange-10-color: var(--quark-style-dark-orange-10-color);
+    --quark-style-orange-20-color: var(--quark-style-dark-orange-20-color);
+    --quark-style-orange-50-color: var(--quark-style-dark-orange-50-color);
+    --quark-style-purple-color: var(--quark-style-dark-purple-color);
+    --quark-style-purple-10-color: var(--quark-style-dark-purple-10-color);
+    --quark-style-purple-20-color: var(--quark-style-dark-purple-20-color);
+    --quark-style-purple-50-color: var(--quark-style-dark-purple-50-color);
+    --quark-style-red-color: var(--quark-style-dark-red-color);
+    --quark-style-theme-color: var(--quark-style-dark-theme-color);
+    --quark-style-theme-10-color: var(--quark-style-dark-theme-10-color);
+    --quark-style-theme-20-color: var(--quark-style-dark-theme-20-color);
+    --quark-style-theme-50-color: var(--quark-style-dark-theme-50-color);
+    --quark-style-cyan-color: var(--quark-style-dark-cyan-color);
+    --quark-style-cyan-10-color: var(--quark-style-dark-cyan-10-color);
+    --quark-style-cyan-20-color: var(--quark-style-dark-cyan-20-color);
+    --quark-style-cyan-50-color: var(--quark-style-dark-cyan-50-color);
+    --quark-style-sea-blue-color: var(--quark-style-dark-sea-blue-color);
+    --quark-style-sea-blue-10-color: var(--quark-style-dark-sea-blue-10-color);
+    --quark-style-sea-blue-20-color: var(--quark-style-dark-sea-blue-20-color);
+    --quark-style-sea-blue-50-color: var(--quark-style-dark-sea-blue-50-color);
+  }
+}
+
+:host[color-scheme-lock='light'] {
+  --quark-style-black-color: #000 !important;
+  --quark-style-font-white-color: #fff !important;
+  --quark-style-gray-color: #060A26 !important;
+  --quark-style-gray-10-color: rgba(6,10,38,0.06) !important;
+  --quark-style-gray-20-color: rgba(6,10,38,0.12) !important;
+  --quark-style-gray-30-color: rgba(6,10,38,0.24) !important;
+  --quark-style-gray-40-color: rgba(6,10,38,0.4) !important;
+  --quark-style-gray-50-color: rgba(6,10,38,0.5) !important;
+  --quark-style-gray-60-color: rgba(6,10,38,0.6) !important;
+  --quark-style-gray-70-color: rgba(6,10,38,0.7) !important;
+  --quark-style-gray-80-color: rgba(6,10,38,0.8) !important;
+  --quark-style-gray-90-color: rgba(6,10,38,0.9) !important;
+  --quark-style-gray-10-opaque-color: #F0F1F2 !important;
+  --quark-style-gray-20-opaque-color: #E1E2E5 !important;
+  --quark-style-gray-30-opaque-color: #C3C4CB !important;
+  --quark-style-gray-40-opaque-color: #9C9DA9 !important;
+  --quark-style-gray-50-opaque-color: #828492 !important;
+  --quark-style-gray-60-opaque-color: #696C7D !important;
+  --quark-style-gray-70-opaque-color: #505367 !important;
+  --quark-style-gray-80-opaque-color: #383B51 !important;
+  --quark-style-gray-90-opaque-color: #1F223C !important;
+  --quark-style-ash-color: #F7F8FA !important;
+  --quark-style-ash-10-color: rgba(247,248,250,0.1) !important;
+  --quark-style-ash-20-color: rgba(247,248,250,0.2) !important;
+  --quark-style-ash-30-color: rgba(247,248,250,0.3) !important;
+  --quark-style-ash-40-color: rgba(247,248,250,0.4) !important;
+  --quark-style-ash-50-color: rgba(247,248,250,0.5) !important;
+  --quark-style-ash-60-color: rgba(247,248,250,0.6) !important;
+  --quark-style-ash-70-color: rgba(247,248,250,0.7) !important;
+  --quark-style-ash-80-color: rgba(247,248,250,0.8) !important;
+  --quark-style-ash-90-color: rgba(247,248,250,0.9) !important;
+  --quark-style-ash-blue-color: #F3FBFF !important;
+  --quark-style-ash-blue-50-color: rgba(230,247,255,0.5) !important;
+  --quark-style-ash-orange-color: #FFF9F8 !important;
+  --quark-style-ash-orange-50-color: rgba(255,243,240,0.5) !important;
+  --quark-style-ash-purple-color: #F9F7FF !important;
+  --quark-style-ash-purple-50-color: rgba(242,240,255,0.5) !important;
+  --quark-style-ash-theme-color: #F7F9FF !important;
+  --quark-style-ash-theme-50-color: rgba(240,242,255,0.5) !important;
+  --quark-style-white-color: #fff !important;
+  --quark-style-white-10-color: rgba(255,255,255,0.1) !important;
+  --quark-style-white-20-color: rgba(255,255,255,0.2) !important;
+  --quark-style-white-30-color: rgba(255,255,255,0.3) !important;
+  --quark-style-white-40-color: rgba(255,255,255,0.4) !important;
+  --quark-style-white-50-color: rgba(255,255,255,0.5) !important;
+  --quark-style-white-60-color: rgba(255,255,255,0.6) !important;
+  --quark-style-white-70-color: rgba(255,255,255,0.7) !important;
+  --quark-style-white-80-color: rgba(255,255,255,0.8) !important;
+  --quark-style-white-90-color: rgba(255,255,255,0.9) !important;
+  --quark-style-white-button-color: #fff !important;
+  --quark-style-blue-color: #119BFF !important;
+  --quark-style-blue-10-color: rgba(17,155,255,0.07) !important;
+  --quark-style-blue-20-color: rgba(17,155,255,0.18) !important;
+  --quark-style-blue-50-color: rgba(17,155,255,0.5) !important;
+  --quark-style-orange-color: #FF6B3F !important;
+  --quark-style-orange-10-color: rgba(255,107,63,0.07) !important;
+  --quark-style-orange-20-color: rgba(255,147,115,0.2) !important;
+  --quark-style-orange-50-color: rgba(255,107,63,0.5) !important;
+  --quark-style-purple-color: #432CDB !important;
+  --quark-style-purple-10-color: rgba(67,44,219,0.07) !important;
+  --quark-style-purple-20-color: rgba(67,44,219,0.18) !important;
+  --quark-style-purple-50-color: rgba(67,44,219,0.5) !important;
+  --quark-style-red-color: #FF4040 !important;
+  --quark-style-theme-color: #0D53FF !important;
+  --quark-style-theme-10-color: rgba(13,83,255,0.07) !important;
+  --quark-style-theme-20-color: rgba(13,83,255,0.18) !important;
+  --quark-style-theme-50-color: rgba(13,83,255,0.5) !important;
+  --quark-style-cyan-color: #29BECC !important;
+  --quark-style-cyan-10-color: rgba(41,190,204,0.1) !important;
+  --quark-style-cyan-20-color: rgba(41,190,204,0.2) !important;
+  --quark-style-cyan-50-color: rgba(41,190,204,0.5) !important;
+  --quark-style-sea-blue-color: #4D80FF !important;
+  --quark-style-sea-blue-10-color: rgba(77,128,255,0.1) !important;
+  --quark-style-sea-blue-20-color: rgba(77,128,255,0.2) !important;
+  --quark-style-sea-blue-50-color: rgba(77,128,255,0.5) !important;
+  --quark-style-dark-black-color: #fff !important;
+  --quark-style-dark-font-white-color: #000 !important;
+  --quark-style-dark-gray-color: #FAFBFF !important;
+  --quark-style-dark-gray-10-color: rgba(250,251,255,0.12) !important;
+  --quark-style-dark-gray-20-color: rgba(250,251,255,0.2) !important;
+  --quark-style-dark-gray-30-color: rgba(250,251,255,0.3) !important;
+  --quark-style-dark-gray-40-color: rgba(250,251,255,0.4) !important;
+  --quark-style-dark-gray-50-color: rgba(250,251,255,0.5) !important;
+  --quark-style-dark-gray-60-color: rgba(250,251,255,0.6) !important;
+  --quark-style-dark-gray-70-color: rgba(250,251,255,0.7) !important;
+  --quark-style-dark-gray-80-color: rgba(250,251,255,0.8) !important;
+  --quark-style-dark-gray-90-color: rgba(250,251,255,0.9) !important;
+  --quark-style-dark-gray-10-opaque-color: #19191A !important;
+  --quark-style-dark-gray-20-opaque-color: #323233 !important;
+  --quark-style-dark-gray-30-opaque-color: #4B4B4C !important;
+  --quark-style-dark-gray-40-opaque-color: #646466 !important;
+  --quark-style-dark-gray-50-opaque-color: #7D7E80 !important;
+  --quark-style-dark-gray-60-opaque-color: #969699 !important;
+  --quark-style-dark-gray-70-opaque-color: #AFAFB2 !important;
+  --quark-style-dark-gray-80-opaque-color: #C8C9CC !important;
+  --quark-style-dark-gray-90-opaque-color: #E1E2E6 !important;
+  --quark-style-dark-ash-color: #2B2D33 !important;
+  --quark-style-dark-ash-10-color: rgba(43,45,51,0.1) !important;
+  --quark-style-dark-ash-20-color: rgba(43,45,51,0.2) !important;
+  --quark-style-dark-ash-30-color: rgba(43,45,51,0.3) !important;
+  --quark-style-dark-ash-40-color: rgba(43,45,51,0.4) !important;
+  --quark-style-dark-ash-50-color: rgba(43,45,51,0.5) !important;
+  --quark-style-dark-ash-60-color: rgba(43,45,51,0.6) !important;
+  --quark-style-dark-ash-70-color: rgba(43,45,51,0.7) !important;
+  --quark-style-dark-ash-80-color: rgba(43,45,51,0.8) !important;
+  --quark-style-dark-ash-90-color: rgba(43,45,51,0.9) !important;
+  --quark-style-dark-ash-blue-color: #293033 !important;
+  --quark-style-dark-ash-blue-50-color: rgba(71,92,102,0.5) !important;
+  --quark-style-dark-ash-orange-color: #332F2E !important;
+  --quark-style-dark-ash-orange-50-color: rgba(102,94,92,0.5) !important;
+  --quark-style-dark-ash-purple-color: #2A2933 !important;
+  --quark-style-dark-ash-purple-50-color: rgba(76,71,102,0.5) !important;
+  --quark-style-dark-ash-theme-color: #262833 !important;
+  --quark-style-dark-ash-theme-50-color: rgba(66,72,102,0.5) !important;
+  --quark-style-dark-white-color: #363840 !important;
+  --quark-style-dark-white-10-color: rgba(54,56,64,0.1) !important;
+  --quark-style-dark-white-20-color: rgba(54,56,64,0.2) !important;
+  --quark-style-dark-white-30-color: rgba(54,56,64,0.3) !important;
+  --quark-style-dark-white-40-color: rgba(54,56,64,0.4) !important;
+  --quark-style-dark-white-50-color: rgba(54,56,64,0.5) !important;
+  --quark-style-dark-white-60-color: rgba(54,56,64,0.6) !important;
+  --quark-style-dark-white-70-color: rgba(54,56,64,0.7) !important;
+  --quark-style-dark-white-80-color: rgba(54,56,64,0.8) !important;
+  --quark-style-dark-white-90-color: rgba(54,56,64,0.9) !important;
+  --quark-style-dark-white-button-color: #585961 !important;
+  --quark-style-dark-blue-color: #66BFFF !important;
+  --quark-style-dark-blue-10-color: rgba(102,191,255,0.15) !important;
+  --quark-style-dark-blue-20-color: rgba(102,191,255,0.24) !important;
+  --quark-style-dark-blue-50-color: rgba(102,191,255,0.5) !important;
+  --quark-style-dark-orange-color: #FF764D !important;
+  --quark-style-dark-orange-10-color: rgba(255,118,77,0.12) !important;
+  --quark-style-dark-orange-20-color: rgba(255,118,77,0.22) !important;
+  --quark-style-dark-orange-50-color: rgba(255,118,77,0.5) !important;
+  --quark-style-dark-purple-color: #A699FF !important;
+  --quark-style-dark-purple-10-color: rgba(189,179,255,0.15) !important;
+  --quark-style-dark-purple-20-color: rgba(189,179,255,0.24) !important;
+  --quark-style-dark-purple-50-color: rgba(166,153,255,0.5) !important;
+  --quark-style-dark-red-color: #FF4D4D !important;
+  --quark-style-dark-theme-color: #6691FF !important;
+  --quark-style-dark-theme-10-color: rgba(102,145,255,0.15) !important;
+  --quark-style-dark-theme-20-color: rgba(102,145,255,0.24) !important;
+  --quark-style-dark-theme-50-color: rgba(102,145,255,0.5) !important;
+  --quark-style-dark-cyan-color: #91EAF2 !important;
+  --quark-style-dark-cyan-10-color: rgba(145,234,242,0.1) !important;
+  --quark-style-dark-cyan-20-color: rgba(145,234,242,0.2) !important;
+  --quark-style-dark-cyan-50-color: rgba(145,234,242,0.5) !important;
+  --quark-style-dark-sea-blue-color: #739BFF !important;
+  --quark-style-dark-sea-blue-10-color: rgba(115,155,255,0.1) !important;
+  --quark-style-dark-sea-blue-20-color: rgba(115,155,255,0.2) !important;
+  --quark-style-dark-sea-blue-50-color: rgba(115,155,255,0.5) !important;
+  --quark-style-black-fixed-color: #000 !important;
+  --quark-style-gray-10-fixed-color: rgba(6,10,38,0.06) !important;
+  --quark-style-gray-20-fixed-color: rgba(6,10,38,0.12) !important;
+  --quark-style-gray-30-fixed-color: rgba(6,10,38,0.24) !important;
+  --quark-style-gray-40-fixed-color: rgba(6,10,38,0.4) !important;
+  --quark-style-gray-50-fixed-color: rgba(6,10,38,0.5) !important;
+  --quark-style-gray-60-fixed-color: rgba(6,10,38,0.6) !important;
+  --quark-style-gray-70-fixed-color: rgba(6,10,38,0.7) !important;
+  --quark-style-gray-80-fixed-color: rgba(6,10,38,0.8) !important;
+  --quark-style-gray-90-fixed-color: rgba(6,10,38,0.9) !important;
+  --quark-style-gray-fixed-color: #060A26 !important;
+  --quark-style-transparent-fixed-color: rgba(255,255,255,0) !important;
+  --quark-style-white-fixed-color: #fff;
+}
+
+:host[color-scheme-lock='dark'] {
+  --quark-style-black-color: var(--quark-style-dark-black-color) !important;
+  --quark-style-font-white-color: var(--quark-style-dark-font-white-color) !important;
+  --quark-style-gray-color: var(--quark-style-dark-gray-color) !important;
+  --quark-style-gray-10-color: var(--quark-style-dark-gray-10-color) !important;
+  --quark-style-gray-20-color: var(--quark-style-dark-gray-20-color) !important;
+  --quark-style-gray-30-color: var(--quark-style-dark-gray-30-color) !important;
+  --quark-style-gray-40-color: var(--quark-style-dark-gray-40-color) !important;
+  --quark-style-gray-50-color: var(--quark-style-dark-gray-50-color) !important;
+  --quark-style-gray-60-color: var(--quark-style-dark-gray-60-color) !important;
+  --quark-style-gray-70-color: var(--quark-style-dark-gray-70-color) !important;
+  --quark-style-gray-80-color: var(--quark-style-dark-gray-80-color) !important;
+  --quark-style-gray-90-color: var(--quark-style-dark-gray-90-color) !important;
+  --quark-style-gray-10-opaque-color: var(--quark-style-dark-gray-10-opaque-color) !important;
+  --quark-style-gray-20-opaque-color: var(--quark-style-dark-gray-20-opaque-color) !important;
+  --quark-style-gray-30-opaque-color: var(--quark-style-dark-gray-30-opaque-color) !important;
+  --quark-style-gray-40-opaque-color: var(--quark-style-dark-gray-40-opaque-color) !important;
+  --quark-style-gray-50-opaque-color: var(--quark-style-dark-gray-50-opaque-color) !important;
+  --quark-style-gray-60-opaque-color: var(--quark-style-dark-gray-60-opaque-color) !important;
+  --quark-style-gray-70-opaque-color: var(--quark-style-dark-gray-70-opaque-color) !important;
+  --quark-style-gray-80-opaque-color: var(--quark-style-dark-gray-80-opaque-color) !important;
+  --quark-style-gray-90-opaque-color: var(--quark-style-dark-gray-90-opaque-color) !important;
+  --quark-style-ash-color: var(--quark-style-dark-ash-color) !important;
+  --quark-style-ash-10-color: var(--quark-style-dark-ash-10-color) !important;
+  --quark-style-ash-20-color: var(--quark-style-dark-ash-20-color) !important;
+  --quark-style-ash-30-color: var(--quark-style-dark-ash-30-color) !important;
+  --quark-style-ash-40-color: var(--quark-style-dark-ash-40-color) !important;
+  --quark-style-ash-50-color: var(--quark-style-dark-ash-50-color) !important;
+  --quark-style-ash-60-color: var(--quark-style-dark-ash-60-color) !important;
+  --quark-style-ash-70-color: var(--quark-style-dark-ash-70-color) !important;
+  --quark-style-ash-80-color: var(--quark-style-dark-ash-80-color) !important;
+  --quark-style-ash-90-color: var(--quark-style-dark-ash-90-color) !important;
+  --quark-style-ash-blue-color: var(--quark-style-dark-ash-blue-color) !important;
+  --quark-style-ash-blue-50-color: var(--quark-style-dark-ash-blue-50-color) !important;
+  --quark-style-ash-orange-color: var(--quark-style-dark-ash-orange-color) !important;
+  --quark-style-ash-orange-50-color: var(--quark-style-dark-ash-orange-50-color) !important;
+  --quark-style-ash-purple-color: var(--quark-style-dark-ash-purple-color) !important;
+  --quark-style-ash-purple-50-color: var(--quark-style-dark-ash-purple-50-color) !important;
+  --quark-style-ash-theme-color: var(--quark-style-dark-ash-theme-color) !important;
+  --quark-style-ash-theme-50-color: var(--quark-style-dark-ash-theme-50-color) !important;
+  --quark-style-white-color: var(--quark-style-dark-white-color) !important;
+  --quark-style-white-10-color: var(--quark-style-dark-white-10-color) !important;
+  --quark-style-white-20-color: var(--quark-style-dark-white-20-color) !important;
+  --quark-style-white-30-color: var(--quark-style-dark-white-30-color) !important;
+  --quark-style-white-40-color: var(--quark-style-dark-white-40-color) !important;
+  --quark-style-white-50-color: var(--quark-style-dark-white-50-color) !important;
+  --quark-style-white-60-color: var(--quark-style-dark-white-60-color) !important;
+  --quark-style-white-70-color: var(--quark-style-dark-white-70-color) !important;
+  --quark-style-white-80-color: var(--quark-style-dark-white-80-color) !important;
+  --quark-style-white-90-color: var(--quark-style-dark-white-90-color) !important;
+  --quark-style-white-button-color: var(--quark-style-dark-white-button-color) !important;
+  --quark-style-blue-color: var(--quark-style-dark-blue-color) !important;
+  --quark-style-blue-10-color: var(--quark-style-dark-blue-10-color) !important;
+  --quark-style-blue-20-color: var(--quark-style-dark-blue-20-color) !important;
+  --quark-style-blue-50-color: var(--quark-style-dark-blue-50-color) !important;
+  --quark-style-orange-color: var(--quark-style-dark-orange-color) !important;
+  --quark-style-orange-10-color: var(--quark-style-dark-orange-10-color) !important;
+  --quark-style-orange-20-color: var(--quark-style-dark-orange-20-color) !important;
+  --quark-style-orange-50-color: var(--quark-style-dark-orange-50-color) !important;
+  --quark-style-purple-color: var(--quark-style-dark-purple-color) !important;
+  --quark-style-purple-10-color: var(--quark-style-dark-purple-10-color) !important;
+  --quark-style-purple-20-color: var(--quark-style-dark-purple-20-color) !important;
+  --quark-style-purple-50-color: var(--quark-style-dark-purple-50-color) !important;
+  --quark-style-red-color: var(--quark-style-dark-red-color) !important;
+  --quark-style-theme-color: var(--quark-style-dark-theme-color) !important;
+  --quark-style-theme-10-color: var(--quark-style-dark-theme-10-color) !important;
+  --quark-style-theme-20-color: var(--quark-style-dark-theme-20-color) !important;
+  --quark-style-theme-50-color: var(--quark-style-dark-theme-50-color) !important;
+  --quark-style-cyan-color: var(--quark-style-dark-cyan-color) !important;
+  --quark-style-cyan-10-color: var(--quark-style-dark-cyan-10-color) !important;
+  --quark-style-cyan-20-color: var(--quark-style-dark-cyan-20-color) !important;
+  --quark-style-cyan-50-color: var(--quark-style-dark-cyan-50-color) !important;
+  --quark-style-sea-blue-color: var(--quark-style-dark-sea-blue-color) !important;
+  --quark-style-sea-blue-10-color: var(--quark-style-dark-sea-blue-10-color) !important;
+  --quark-style-sea-blue-20-color: var(--quark-style-dark-sea-blue-20-color) !important;
+  --quark-style-sea-blue-50-color: var(--quark-style-dark-sea-blue-50-color);
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.e3zH6k66lhwQmue02OIo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483647;
+  user-select: none;
+  touch-action: none;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.XSolLBOPzLIewWIcymdz {
+  opacity: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+  border-radius: 50%;
+  box-shadow: 0 2px 8px -4px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+}
+.biVUpvN93EmkOJwL3_S9 {
+  width: 100%;
+  height: 100%;
+  background-image: url(data:image/png;base64,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);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: center;
+  cursor: pointer;
+}
+.yp3mGzKWHiMEs5Yf5adM {
+  background-image: url(data:image/png;base64,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);
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: center;
+}
+.aYBJEvmlh_g6IdOKGoYZ {
+  opacity: 0;
+  position: absolute;
+  bottom: -2px;
+  left: -1px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--quark-style-white-color, #fff);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px -2px var(--quark-style-gray-20-fixed-color, rgba(6, 10, 38, 0.12));
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition: opacity 140ms ease-in-out;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.Cj6lE78WHXKONOtnaYRt {
+  opacity: 1;
+}
+.dTHVKTmUzVyuqBT2cvYV {
+  position: absolute;
+  bottom: -8px;
+  left: -2px;
+  width: 40px;
+  height: 16px;
+  background-image: linear-gradient(90deg, #4079ff 0%, #618eff 100%);
+  border: 1px solid var(--quark-style-white-20-color, rgba(255, 255, 255, 0.2));
+  border-radius: 16px;
+  font-family: MicrosoftYaHeiSemibold;
+  font-size: 10px;
+  color: var(--quark-style-white-fixed-color, #fff);
+  letter-spacing: 0;
+  line-height: 16px;
+  text-align: center;
+}
+.uk0EI1YoIhQV5lLx72Gd {
+  background: var(--quark-style-theme-color, #0D53FF);
+  border-radius: 20px;
+  height: 28px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: MicrosoftYaHeiSemibold;
+  font-size: 20px;
+  color: var(--quark-style-white-fixed-color, #fff);
+  letter-spacing: 0;
+  font-weight: 600;
+  padding: 0 8px;
+  line-height: 28px;
+  position: absolute;
+  top: -3px;
+  left: 25px;
+  opacity: 1;
+  transition: opacity 40ms ease-in-out;
+  transform: scale(0.5, 0.5);
+  transform-origin: top left;
+}
+.AHVbJB6gFu6rOlkqoEm3 {
+  opacity: 0;
+}
+.tBJRAeZtTiYIkudq6Gdw {
+  width: 36px;
+  background-color: var(--quark-style-ash-90-color, rgba(247, 248, 250, 0.9));
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 32px 64px -12px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+  border-radius: 18px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 200ms ease-in-out, top 200ms ease-out, bottom 200ms ease-out;
+  padding: 7px 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 0;
+  box-sizing: border-box;
+}
+.tBJRAeZtTiYIkudq6Gdw .uk0EI1YoIhQV5lLx72Gd {
+  opacity: 0;
+}
+.D2QXqgNdAuORvciE6wL5 {
+  bottom: initial;
+  top: 46px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.D2QXqgNdAuORvciE6wL5 .uk0EI1YoIhQV5lLx72Gd {
+  opacity: 1;
+}
+.JmIjWvvFODdT23_Q6zUO {
+  bottom: 0;
+  top: initial;
+  flex-direction: column-reverse;
+}
+.jgVnGFgtgcSOSgr8xCaS {
+  bottom: 46px;
+  top: initial;
+  opacity: 1;
+  pointer-events: auto;
+}
+.Oef5CvgqF1l6ng6Iz15g {
+  width: 28px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: center;
+  border-radius: 14px;
+  position: relative;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.Oef5CvgqF1l6ng6Iz15g:hover {
+  background-color: var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+.yTmAAv9tgUCqpHw0lM49 {
+  color: var(--quark-style-gray-color, #060A26);
+}
+.yTmAAv9tgUCqpHw0lM49 .uk0EI1YoIhQV5lLx72Gd {
+  left: 20px;
+}
+.oGfMh4LUKxLu3e33KPMT {
+  color: var(--quark-style-gray-30-color, rgba(6, 10, 38, 0.24));
+  cursor: default;
+}
+.oGfMh4LUKxLu3e33KPMT:hover {
+  background-color: transparent;
+}
+.uoPeDWIL7Bew0BnSG_kJ {
+  color: var(--quark-style-gray-color, #060A26);
+}
+.VTHEjIMmr55z8XgFlISu {
+  background: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 8px 32px -6px var(--quark-style-gray-20-fixed-color, rgba(6, 10, 38, 0.12));
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  left: calc(100% + 9px);
+  font-family: MicrosoftYaHei;
+  font-size: 12px;
+  color: var(--quark-style-gray-color, #060A26);
+  letter-spacing: 0;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 6px;
+  display: none;
+}
+.z41efHc6PAuGM9kK7ikX {
+  left: initial;
+  right: calc(100% + 9px);
+}
+.Oef5CvgqF1l6ng6Iz15g:hover .VTHEjIMmr55z8XgFlISu {
+  display: block;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.do4DWVTDGANA86tut2Z6 path {
+  fill: var(--icon-path-fill);
+}
+.OwbGqGXfBn_6Xfv3aYdM path {
+  transition: 0.2s all;
+}
+.OwbGqGXfBn_6Xfv3aYdM:hover path {
+  fill: var(--icon-hover-fill);
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.b26sQwhv2rKauvA1j_dY {
+  z-index: 2147483647 !important;
+  user-select: none;
+}
+.h1sZVJQlYDmrFR79Mb9K {
+  max-width: 362px;
+  width: auto;
+  height: 36px;
+  background-color: var(--quark-style-white-color, #fff);
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 12px 32px -6px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+  border-radius: 10px;
+}
+.h1sZVJQlYDmrFR79Mb9K .jzjAc8mr67PK74GLt2Ma {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 6px;
+}
+.h1sZVJQlYDmrFR79Mb9K .ncKwupflF1nZUghMBvFA {
+  width: 16px;
+  height: 16px;
+}
+.h1sZVJQlYDmrFR79Mb9K .ML4JXwUkb14Af1EIMaBt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 28px;
+  padding: 0 6px;
+  margin-right: 2px;
+  border-radius: 6px;
+  column-gap: 3px;
+}
+.h1sZVJQlYDmrFR79Mb9K .ML4JXwUkb14Af1EIMaBt:hover:not(.h1sZVJQlYDmrFR79Mb9K .b_SJTxOI1uROFhI6zrhM) {
+  background: var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+.h1sZVJQlYDmrFR79Mb9K .b_SJTxOI1uROFhI6zrhM {
+  cursor: default;
+}
+.h1sZVJQlYDmrFR79Mb9K .b_SJTxOI1uROFhI6zrhM .qwkG4j8rmBiMHjRUhJeS {
+  color: var(--quark-style-gray-40-color, rgba(6, 10, 38, 0.4)) !important;
+}
+.h1sZVJQlYDmrFR79Mb9K .ML4JXwUkb14Af1EIMaBt .qwkG4j8rmBiMHjRUhJeS {
+  font-size: 12px;
+  color: var(--quark-style-gray-color, #060A26);
+  line-height: 16px;
+  white-space: nowrap;
+  position: relative;
+  top: 1px;
+}
+.h1sZVJQlYDmrFR79Mb9K .ML4JXwUkb14Af1EIMaBt .zdQFd3xGhN8sMBadYFSp {
+  width: 16px;
+  height: 16px;
+}
+.h1sZVJQlYDmrFR79Mb9K .QVFWPdSNwzvD9tnvMvyU {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+.h1sZVJQlYDmrFR79Mb9K .zo_m3IguV07g4acTiPFv {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.h1sZVJQlYDmrFR79Mb9K .zo_m3IguV07g4acTiPFv:hover {
+  background: var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+.h1sZVJQlYDmrFR79Mb9K .VYOyfN_tF7bY8llcZJ23 {
+  width: 16px;
+  height: 16px;
+}
+.h1sZVJQlYDmrFR79Mb9K .mJILneJLwW8jDL9cHv2V {
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 110px;
+  max-height: 136px;
+  height: auto;
+  top: 36px;
+  right: -4px;
+  padding: 4px 0;
+  background-color: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 4px 16px -6px var(--quark-style-gray-20-fixed-color, rgba(6, 10, 38, 0.12));
+  border-radius: 8px;
+  row-gap: 4px;
+}
+.h1sZVJQlYDmrFR79Mb9K .C_aY13XJ2Ss_21TC3jyC {
+  top: -144px;
+}
+.h1sZVJQlYDmrFR79Mb9K .ZhhcparFhGCiAK9mMLQF {
+  width: 102px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  column-gap: 8px;
+  border-radius: 6px;
+  padding: 0 6px;
+  box-sizing: border-box;
+}
+.h1sZVJQlYDmrFR79Mb9K .ZhhcparFhGCiAK9mMLQF:hover:not(.h1sZVJQlYDmrFR79Mb9K .Olg4PLyIQHmuea332UDY) {
+  background: var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+.h1sZVJQlYDmrFR79Mb9K .Olg4PLyIQHmuea332UDY {
+  cursor: default;
+}
+.h1sZVJQlYDmrFR79Mb9K .Olg4PLyIQHmuea332UDY .fnI5olbnA6Q3NiDklSm7 {
+  color: var(--quark-style-gray-40-color, rgba(6, 10, 38, 0.4)) !important;
+}
+.h1sZVJQlYDmrFR79Mb9K .U8MU_Ksdc0yoieRsZ7gI {
+  width: 16px;
+  height: 16px;
+}
+.h1sZVJQlYDmrFR79Mb9K .fnI5olbnA6Q3NiDklSm7 {
+  font-size: 12px;
+  color: var(--quark-style-gray-color, #060A26);
+}
+.h1sZVJQlYDmrFR79Mb9K .ekip__pHnbH4PhotX4Pk {
+  width: 100%;
+  height: 1px;
+  background: var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.wWdv12BtYwZDhJc5qsT_ {
+  width: 100%;
+  height: 100%;
+  z-index: 2147483647;
+  border: none;
+  border-radius: 14px;
+  user-select: none;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.xKGubsWYdZJpyzA5ddhy {
+  background: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 12px 32px -6px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+  border-radius: 14px;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.XiVSaT09RdweN4RLxpTD {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483648;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 120ms;
+}
+.sj_xlKA9qBXkoe5vEYPs {
+  margin-bottom: 20vh;
+  padding: 24px;
+  border-radius: 4px;
+  width: 500px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--quark-style-white-color, #fff);
+  border-radius: 15px;
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+  box-shadow: 0 12px 32px -6px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+}
+.sj_xlKA9qBXkoe5vEYPs .q9KZ51QPqGrNKFQQd_p0 {
+  font-size: 20px;
+  color: var(--quark-style-gray-color, #060A26);
+  line-height: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.sj_xlKA9qBXkoe5vEYPs .jcVybfU3WmP9FuZAmPVY {
+  font-size: 14px;
+  color: var(--quark-style-gray-60-color, rgba(6, 10, 38, 0.6));
+  text-align: justify;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.gIOr8TrinpeJpZcvR2GU {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.gIOr8TrinpeJpZcvR2GU .R0NqKpCPvxqpqr2EWZow {
+  color: var(--quark-style-gray-color, #060A26);
+  background: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-20-color, rgba(6, 10, 38, 0.12));
+}
+.gIOr8TrinpeJpZcvR2GU .Cy6jiEJ1Img9rWXyYLcu {
+  color: var(--quark-style-white-fixed-color, #fff);
+  background-color: var(--quark-style-sea-blue-color, #4D80FF);
+  margin-right: 10px;
+  border: 1px solid var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+}
+.gIOr8TrinpeJpZcvR2GU .xpbRejsm0eR6Dn7c3bns {
+  border-radius: 8px;
+  letter-spacing: 0;
+  line-height: 20px;
+  font-weight: 400;
+  font-size: 14px;
+  width: 52px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+.Vlxa4Kh4FEGi21wPA3mp {
+  opacity: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--quark-style-white-color, #fff);
+  border: 1px solid var(--quark-style-gray-10-color, rgba(6, 10, 38, 0.06));
+  border-radius: 14px;
+  box-shadow: 0 2px 8px -4px var(--quark-style-gray-30-fixed-color, rgba(6, 10, 38, 0.24));
+}
+.DeE9HvAwSPPPzXjqEAsR {
+  width: 100%;
+  height: 100%;
+}
+.ZUxoshW0LvxaZSZdSZKw {
+  height: 13px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: transparent;
+  z-index: 9;
+  left: 0;
+}
+.wdPIYyTqcyCUy7IduMTQ {
+  position: absolute;
+  background-color: transparent;
+  bottom: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* ！！！切勿直接改动该文件，该文件由 generator.ts 自动生成！！！ */
+/* !!! DONT MODIFY THIS FILE DIRECTLY, THIS FILE IS GENERATED BY generator.ts AUTOMATICALLY !!! */
+._uFhnlsdwLItTwVOo4VW {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  visibility: visible !important;
+  z-index: 2147483647 !important;
+}
+

@@ -1,0 +1,53 @@
+{
+   "action": {
+      "default_title": "夸克，浏览器 AI 助手"
+   },
+   "background": {
+      "service_worker": "qk-background.js"
+   },
+   "commands": {
+      "open-qk-ai-translate": {
+         "description": "快捷打开翻译",
+         "suggested_key": {
+            "default": "Alt+1"
+         }
+      },
+      "open-qk-hover-bar": {
+         "description": "快捷打开悬浮球",
+         "suggested_key": {
+            "default": "Alt+K",
+            "mac": "Command+K"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "exclude_matches": [ "https://b.quark.cn/apps/H79uH9HfP/*" ],
+      "js": [ "qk-content.js" ],
+      "matches": [ "http://*/*", "https://*/*", "ftp://*/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "在浏览器随时唤起夸克 AI，AI 搜索智能回答，还能让 AI 帮你解读、润色、翻译，高效完成工作。",
+   "externally_connectable": {
+      "matches": [ "https://b.quark.cn/apps/H79uH9HfP/*" ]
+   },
+   "homepage_url": "https://microsoftedge.microsoft.com/addons/detail/enjndociabbicklhimdbcckdibpckfnm",
+   "host_permissions": [ "\u003Call_urls>", "http://*/*", "https://*/*" ],
+   "icons": {
+      "128": "/images/app.png",
+      "16": "/images/app.png",
+      "32": "/images/app.png",
+      "48": "/images/app.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnmj3sO13SCoU5KSJNI7mxVLziVPjDLIYjjDZ0Ps8vlQTR3mY7ohrMaskiIrqY9eYq1wm1MqI7ILJ7xcIISPyKjlfvXH0C1yK1r6/rfMGl5s/KRANCEkVJ+YNpMlVhY8QZdtmtNL6Q+vL3Ljt0pN3QVPu19daFDRZ1H5RhmMrL8KnZImAtwUFX5ergZSOUXNpHlWZAJRoqi7ENAe0gSnboRWEnp8Or2j90vUfUULMLaq+7aHY49M0gcb0UHoCGCcdgyJoFFKuXe8xn1f3Di7GYJbKpCwIglH68xYMku0keXiCZ3JSoFi7uH82AJTAYQHu//CH4c8YcrX9OIpy5UzwpQIDAQAB",
+   "manifest_version": 3,
+   "name": "夸克，浏览器 AI 助手",
+   "options_page": "setting.html",
+   "permissions": [ "nativeMessaging", "storage", "tabs", "windows", "scripting", "webRequest", "system.display", "webNavigation", "cookies" ],
+   "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+   "version": "1.0.16",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "qk-launcher.html", "qk-content.css", "qk-highlight.html" ]
+   } ]
+}

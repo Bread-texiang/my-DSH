@@ -1,0 +1,83 @@
+/* ---------- Game navigation ---------- */
+
+  .game-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: -2px 0 17px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .nav-back,
+  .nav-help {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+  }
+
+  .nav-back {
+    padding: 4px 0;
+    border: 0;
+    background: none;
+  }
+
+  .nav-back:hover {
+    color: var(--gold-light);
+  }
+
+  .nav-back svg {
+    width: 13px;
+    height: 13px;
+    transition: transform 180ms var(--ease-out);
+  }
+
+  .nav-back:hover svg {
+    transform: translateX(-2px);
+  }
+
+  .nav-title {
+    overflow: hidden;
+    color: var(--muted-dim);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    line-height: 1;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .nav-help {
+    padding: 5px 9px;
+    border: 1px solid rgba(238, 217, 175, 0.11);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.025);
+    color: #a8b5ac;
+  }
+
+  .nav-help:hover {
+    border-color: rgba(238, 217, 175, 0.22);
+    color: var(--gold-light);
+  }
+
+  .nav-help span {
+    display: grid;
+    width: 12px;
+    height: 12px;
+    place-items: center;
+    border: 1px solid rgba(230, 193, 124, 0.32);
+    border-radius: 50%;
+    color: var(--gold);
+    font-size: 7px;
+    font-weight: 750;
+  }

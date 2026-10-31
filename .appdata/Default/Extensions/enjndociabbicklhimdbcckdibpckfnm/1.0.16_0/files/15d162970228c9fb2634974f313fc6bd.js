@@ -1,0 +1,1 @@
+window.__VERSION="2.0.19-911",window.ENV_TYPE="prod",window.__INITIAL_PROPS__={version:"0.0.1",isOfflinePackage:"",renderType:"CSR"};

@@ -1,0 +1,498 @@
+/* Minesweeper */
+
+  .mine-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 13px;
+  }
+
+  .mine-title h1 {
+    margin: 0;
+    color: #fbf4e6;
+    font-size: clamp(33px, 5.1vw, 46px);
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    line-height: 1;
+  }
+
+  .mine-title h1 span {
+    margin-left: 4px;
+    color: var(--gold);
+    font-size: 0.42em;
+    font-weight: 650;
+    letter-spacing: 0.06em;
+    -webkit-text-fill-color: var(--gold);
+    text-shadow: 0 0 20px rgba(230, 193, 124, 0.2);
+  }
+
+  .mine-title p {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 10.5px;
+    letter-spacing: 0.025em;
+    line-height: 1.55;
+  }
+
+  .mine-best {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    padding-bottom: 2px;
+    color: var(--muted-dim);
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+  }
+
+  .mine-best strong {
+    color: var(--gold-light);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .mine-hud {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 11px;
+  }
+
+  .mine-stats {
+    display: flex;
+    gap: 8px;
+  }
+
+  .mine-stat {
+    display: flex;
+    min-width: 77px;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px 11px;
+    border: 1px solid rgba(239, 217, 173, 0.085);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.022);
+  }
+
+  .mine-stat span {
+    color: var(--muted-dim);
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    line-height: 1;
+  }
+
+  .mine-stat strong {
+    color: #f5ebd8;
+    font-size: 20px;
+    font-weight: 750;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .mine-stat:last-child strong {
+    color: var(--gold-light);
+  }
+
+  .mine-difficulty {
+    display: flex;
+    align-items: stretch;
+    gap: 2px;
+    padding: 3px;
+    border: 1px solid rgba(239, 217, 173, 0.085);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.022);
+  }
+
+  .mine-level {
+    display: flex;
+    min-width: 73px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 5px 8px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    color: var(--muted);
+    background: transparent;
+    font-size: 9px;
+    font-weight: 650;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+      color 180ms ease,
+      border-color 180ms ease,
+      background 180ms ease,
+      transform 160ms var(--ease-out);
+  }
+
+  .mine-level small {
+    color: var(--muted-dim);
+    font-size: 6.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .mine-level:hover {
+    color: #f0e6d3;
+    background: rgba(255, 255, 255, 0.045);
+  }
+
+  .mine-level.is-active {
+    border-color: rgba(248, 226, 176, 0.34);
+    color: #1c281f;
+    background: linear-gradient(135deg, #f2dba3, #d4aa61);
+    box-shadow: 0 7px 16px -11px rgba(224, 181, 98, 0.8);
+  }
+
+  .mine-level.is-active small {
+    color: rgba(26, 36, 28, 0.6);
+  }
+
+  .mine-board-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(236, 213, 169, 0.1);
+    border-radius: var(--radius-board);
+    background:
+      radial-gradient(circle at 50% 0%, rgba(55, 101, 82, 0.12), transparent 48%),
+      linear-gradient(145deg, #0a1713, #07110e);
+    box-shadow:
+      inset 0 2px 22px rgba(0, 0, 0, 0.42),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.018),
+      0 28px 45px -27px rgba(0, 0, 0, 0.85);
+    container-type: inline-size;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .mine-board {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(var(--size, 9), minmax(0, 1fr));
+    grid-template-rows: repeat(var(--size, 9), minmax(0, 1fr));
+    gap: var(--mine-gap, 3px);
+  }
+
+  .mine-cell {
+    position: relative;
+    display: grid;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    place-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.065);
+    border-radius: 8px;
+    color: #a6b8ac;
+    background:
+      linear-gradient(145deg, rgba(54, 80, 68, 0.82), rgba(20, 36, 28, 0.95));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.12),
+      0 2px 4px rgba(0, 0, 0, 0.14);
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    cursor: pointer;
+    transform: translateZ(0);
+    transition:
+      background 120ms ease,
+      border-color 120ms ease,
+      transform 120ms var(--ease-out),
+      box-shadow 120ms ease;
+  }
+
+  .mine-cell:hover:not(.is-revealed):not(.is-flagged) {
+    border-color: rgba(235, 211, 166, 0.2);
+    background:
+      linear-gradient(145deg, rgba(68, 96, 82, 0.92), rgba(26, 45, 35, 0.96));
+    transform: translateY(-1px);
+  }
+
+  .mine-cell:active:not(.is-revealed) {
+    transform: translateY(0) scale(0.97);
+  }
+
+  .mine-cell:focus-visible {
+    outline: 2px solid rgba(248, 226, 176, 0.8);
+    outline-offset: 1px;
+    z-index: 2;
+  }
+
+  .mine-cell.is-flagged {
+    border-color: rgba(235, 200, 135, 0.22);
+    color: #f0d29a;
+    background:
+      linear-gradient(145deg, rgba(100, 76, 35, 0.62), rgba(47, 37, 19, 0.82));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 245, 220, 0.12),
+      0 0 15px rgba(219, 178, 98, 0.04);
+  }
+
+  .mine-cell.is-revealed {
+    border-color: rgba(255, 255, 255, 0.028);
+    color: #94aa9e;
+    background: rgba(4, 12, 8, 0.38);
+    box-shadow:
+      inset 0 1px 3px rgba(0, 0, 0, 0.18),
+      0 0 0 1px rgba(0, 0, 0, 0.02);
+    cursor: default;
+  }
+
+  .mine-cell.is-mine {
+    border-color: rgba(232, 119, 94, 0.28);
+    color: #ffd8b4;
+    background:
+      radial-gradient(circle at 35% 26%, rgba(255, 172, 123, 0.34), transparent 52%),
+      linear-gradient(145deg, #8e3b2d, #511c21);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 207, 168, 0.22),
+      0 0 16px rgba(204, 67, 52, 0.2);
+    cursor: default;
+  }
+
+  .mine-cell.is-exploded {
+    background:
+      radial-gradient(circle at 50% 45%, rgba(255, 230, 168, 0.55), transparent 30%),
+      linear-gradient(145deg, #e25a40, #9a251f);
+    box-shadow:
+      0 0 24px rgba(238, 97, 63, 0.45),
+      inset 0 1px 0 rgba(255, 244, 211, 0.35);
+    animation: mine-blast 320ms var(--ease-out);
+  }
+
+  .mine-cell.is-wrong::after {
+    content: "×";
+    position: absolute;
+    color: #ff9b83;
+    font-size: 1.1em;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  }
+
+  .mine-cell.n1 { color: #78b4da; }
+  .mine-cell.n2 { color: #82c79c; }
+  .mine-cell.n3 { color: #e68e7d; }
+  .mine-cell.n4 { color: #a9a2dc; }
+  .mine-cell.n5 { color: #d8ad6d; }
+  .mine-cell.n6 { color: #6fc4b8; }
+  .mine-cell.n7 { color: #d0d7d2; }
+  .mine-cell.n8 { color: #9f998f; }
+
+  .mine-board[data-size="9"] .mine-cell {
+    border-radius: 9px;
+    font-size: clamp(16px, 5cqi, 24px);
+  }
+
+  .mine-board[data-size="12"] .mine-cell {
+    border-radius: 7px;
+    font-size: clamp(13px, 3.8cqi, 18px);
+  }
+
+  .mine-board[data-size="16"] .mine-cell {
+    border-radius: 5px;
+    font-size: clamp(10px, 2.8cqi, 14px);
+  }
+
+  .mine-board[data-size="12"] {
+    --mine-gap: 2.5px;
+  }
+
+  .mine-board[data-size="16"] {
+    --mine-gap: 2px;
+  }
+
+  .mine-controls {
+    display: flex;
+    align-items: stretch;
+    gap: 9px;
+    margin-top: 12px;
+  }
+
+  .mine-mode,
+  .mine-restart {
+    display: flex;
+    height: 43px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid rgba(240, 218, 177, 0.12);
+    border-radius: 12px;
+    color: #b8c4bc;
+    background: rgba(255, 255, 255, 0.032);
+    font-size: 9.5px;
+    font-weight: 650;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition:
+      color 180ms ease,
+      border-color 180ms ease,
+      background 180ms ease,
+      transform 160ms var(--ease-out);
+  }
+
+  .mine-mode {
+    flex: 1;
+  }
+
+  .mine-mode:hover,
+  .mine-restart:hover {
+    border-color: rgba(240, 218, 177, 0.22);
+    color: var(--gold-light);
+    background: rgba(255, 255, 255, 0.055);
+  }
+
+  .mine-mode.is-active {
+    border-color: rgba(246, 220, 163, 0.36);
+    color: #f2d99e;
+    background: rgba(230, 193, 124, 0.1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .mine-mode em {
+    display: grid;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 3px;
+    place-items: center;
+    border: 1px solid rgba(240, 218, 177, 0.14);
+    border-radius: 5px;
+    color: var(--muted);
+    font-size: 7px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .mine-mode svg,
+  .mine-restart svg {
+    width: 14px;
+    height: 14px;
+    flex: none;
+  }
+
+  .mine-restart {
+    width: 128px;
+    flex: none;
+  }
+
+  .mine-tip {
+    margin: 9px 1px 0;
+    color: var(--muted-dim);
+    font-size: 8px;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .mine-app .overlay h2 {
+    font-size: clamp(25px, 6cqi, 32px);
+  }
+
+  @keyframes mine-blast {
+    0% { transform: scale(1); filter: brightness(1); }
+    35% { transform: scale(1.12); filter: brightness(1.35); }
+    100% { transform: scale(1); filter: brightness(1); }
+  }
+
+  @media (max-width: 520px) {
+    .mine-head {
+      margin-bottom: 10px;
+    }
+
+    .mine-title h1 {
+      font-size: 34px;
+    }
+
+    .mine-title p {
+      margin-top: 6px;
+      font-size: 9.5px;
+    }
+
+    .mine-hud {
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 8px;
+      margin-bottom: 9px;
+    }
+
+    .mine-stats {
+      flex: 1;
+      gap: 6px;
+    }
+
+    .mine-stat {
+      min-width: 61px;
+      flex: 1;
+      padding: 7px 9px;
+      border-radius: 10px;
+    }
+
+    .mine-stat strong {
+      font-size: 17px;
+    }
+
+    .mine-difficulty {
+      width: 100%;
+      order: -1;
+    }
+
+    .mine-level {
+      min-width: 0;
+      flex: 1;
+      padding: 5px 4px;
+    }
+
+    .mine-board-wrap {
+      padding: 7px;
+      border-radius: 16px;
+    }
+
+    .mine-controls {
+      gap: 7px;
+      margin-top: 9px;
+    }
+
+    .mine-mode,
+    .mine-restart {
+      height: 40px;
+      font-size: 8.5px;
+    }
+
+    .mine-restart {
+      width: 112px;
+    }
+
+    .mine-tip {
+      font-size: 7px;
+    }
+  }
+
+  @media (max-height: 700px) and (min-width: 521px) {
+    .mine-tip {
+      display: none;
+    }
+
+    .mine-head {
+      margin-bottom: 9px;
+    }
+  }

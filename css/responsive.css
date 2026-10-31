@@ -1,0 +1,308 @@
+/* ---------- Hub responsive ---------- */
+
+  @media (max-width: 980px) {
+    .game-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .game-card.mine-card {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 860px) {
+    .home-side {
+      display: none;
+    }
+
+    .game-card {
+      min-height: 336px;
+    }
+
+    .home-copy h1 {
+      font-size: clamp(48px, 9vw, 72px);
+    }
+  }
+
+  @media (max-width: 720px) {
+    .home-inner {
+      gap: 19px;
+    }
+
+    .home-header {
+      align-items: flex-start;
+    }
+
+    .home-copy h1 {
+      font-size: clamp(42px, 11vw, 58px);
+    }
+
+    .home-subtitle {
+      max-width: 440px;
+      margin-top: 13px;
+      font-size: 11px;
+    }
+
+    .game-grid {
+      grid-template-columns: 1fr;
+      gap: 13px;
+    }
+
+    .game-card.mine-card {
+      grid-column: auto;
+    }
+
+    .game-card {
+      min-height: 288px;
+      padding: 18px 19px 17px;
+      border-radius: 23px;
+    }
+
+    .card-visual {
+      height: 112px;
+      margin: 12px 0;
+    }
+
+    .card-content h2 {
+      font-size: 25px;
+    }
+
+    .card-footer {
+      margin-top: 12px;
+      padding-top: 11px;
+    }
+
+    .home-footer {
+      font-size: 8px;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .game-nav {
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+    }
+
+    .nav-title {
+      display: none;
+    }
+
+    .stack-head {
+      margin-bottom: 10px;
+    }
+
+    .stack-title h1 {
+      font-size: 34px;
+    }
+
+    .stack-title p {
+      margin-top: 6px;
+      font-size: 9.5px;
+    }
+
+    .stack-hud {
+      gap: 9px;
+      padding: 8px 9px;
+      border-radius: 12px;
+    }
+
+    .stack-stat {
+      gap: 4px;
+      font-size: 7px;
+    }
+
+    .stack-stat strong {
+      font-size: 14px;
+    }
+
+    #stackCanvas {
+      height: clamp(292px, calc(100svh - 330px), 470px);
+    }
+
+    .drop-btn {
+      height: 49px;
+      font-size: 12px;
+    }
+
+    .stack-reset {
+      width: 49px;
+      height: 49px;
+    }
+
+    .stack-tip {
+      font-size: 7.5px;
+    }
+
+    .tutorial-layer {
+      padding: 12px;
+    }
+
+    .tutorial-card {
+      max-height: 94svh;
+      padding: 21px 19px 19px;
+      border-radius: 22px;
+    }
+
+    .tutorial-visual {
+      min-height: 128px;
+      margin-bottom: 18px;
+      padding: 15px;
+    }
+
+    .tutorial-text {
+      font-size: 11px;
+    }
+
+    .tutorial-footer {
+      margin-top: 17px;
+      padding-top: 13px;
+    }
+  }
+
+  @media (max-height: 760px) and (min-width: 861px) {
+    .home-inner {
+      gap: 18px;
+    }
+
+    .home-eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .home-copy h1 {
+      font-size: clamp(52px, 5.4vw, 68px);
+    }
+
+    .home-subtitle {
+      margin-top: 11px;
+    }
+
+    .game-card {
+      min-height: 320px;
+    }
+
+    .card-visual {
+      height: 112px;
+      margin: 11px 0 12px;
+    }
+  }
+
+  @media (max-height: 680px) {
+    .home-inner {
+      gap: 13px;
+    }
+
+    .home-eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .home-copy h1 {
+      font-size: clamp(40px, 8vw, 56px);
+    }
+
+    .home-subtitle {
+      margin-top: 8px;
+      line-height: 1.55;
+    }
+
+    .game-card {
+      min-height: 282px;
+      padding-top: 16px;
+      padding-bottom: 15px;
+    }
+
+    .card-visual {
+      height: 95px;
+      margin: 9px 0 10px;
+    }
+
+    .card-content p {
+      display: none;
+    }
+
+    .card-footer {
+      margin-top: 9px;
+      padding-top: 9px;
+    }
+
+    .home-footer {
+      display: none;
+    }
+
+    .stack-title p {
+      display: none;
+    }
+
+    .stack-head {
+      margin-bottom: 9px;
+    }
+
+    #stackCanvas {
+      height: clamp(260px, calc(100svh - 305px), 420px);
+    }
+
+    .stack-tip {
+      display: none;
+    }
+
+    .stack-controls {
+      margin-top: 9px;
+    }
+  }
+
+  @media (max-height: 920px) and (min-width: 521px) {
+    body {
+      padding: 12px 18px;
+    }
+
+    .app {
+      padding: 15px 20px;
+    }
+
+    .game-nav {
+      margin-bottom: 10px;
+      padding-bottom: 9px;
+    }
+
+    .brand h1 {
+      margin-top: 7px;
+      font-size: 58px;
+    }
+
+    .tagline {
+      display: none;
+    }
+
+    .toolbar {
+      margin: 13px 0 10px;
+    }
+
+    .score-card {
+      padding: 8px 10px;
+    }
+
+    .score-value {
+      margin-top: 5px;
+      font-size: 20px;
+    }
+
+    .app-footer {
+      margin-top: 10px;
+      padding-top: 9px;
+    }
+
+    .stack-head {
+      margin-bottom: 10px;
+    }
+
+    .stack-title p {
+      margin-top: 6px;
+    }
+
+    #stackCanvas {
+      height: clamp(300px, calc(100svh - 380px), 480px);
+    }
+
+    .stack-controls {
+      margin-top: 10px;
+    }
+  }
