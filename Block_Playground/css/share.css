@@ -1,0 +1,325 @@
+/* Share dialog and fullscreen utility state. */
+
+.utility-button .icon-contract {
+  display: none;
+}
+
+.utility-button[data-fullscreen="true"] .icon-expand {
+  display: none;
+}
+
+.utility-button[data-fullscreen="true"] .icon-contract {
+  display: block;
+}
+
+.home-footer-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.share-link {
+  padding: 0;
+  border: 0;
+  color: var(--gold);
+  background: transparent;
+  font: inherit;
+  font-weight: 650;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  transition: color 180ms ease, transform 180ms var(--ease-out);
+}
+
+.share-link:hover {
+  color: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+body.share-open {
+  overflow: hidden;
+}
+
+.share-layer {
+  position: fixed;
+  z-index: 90;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(42, 95, 77, 0.2), transparent 58%),
+    rgba(3, 10, 7, 0.7);
+  -webkit-backdrop-filter: blur(13px) saturate(95%);
+  backdrop-filter: blur(13px) saturate(95%);
+}
+
+.share-layer.is-open {
+  display: flex;
+}
+
+.share-card {
+  position: relative;
+  width: min(100%, 470px);
+  max-height: min(92svh, 620px);
+  padding: 27px 27px 22px;
+  overflow-y: auto;
+  border: 1px solid rgba(242, 220, 178, 0.17);
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(66, 118, 98, 0.12), transparent 44%),
+    linear-gradient(155deg, rgba(20, 39, 32, 0.99), rgba(7, 18, 14, 0.995));
+  box-shadow:
+    0 50px 110px -35px rgba(0, 0, 0, 0.95),
+    0 0 0 1px rgba(255, 255, 255, 0.018),
+    inset 0 1px 0 rgba(255, 250, 235, 0.08);
+  scrollbar-width: thin;
+  scrollbar-color: rgba(230, 193, 124, 0.25) transparent;
+}
+
+.share-card::-webkit-scrollbar {
+  width: 5px;
+}
+
+.share-card::-webkit-scrollbar-thumb {
+  border-radius: 99px;
+  background: rgba(230, 193, 124, 0.23);
+}
+
+.share-close {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid rgba(240, 219, 178, 0.1);
+  border-radius: 50%;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.025);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.share-close:hover {
+  border-color: rgba(240, 219, 178, 0.22);
+  color: var(--gold-light);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.share-mark {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 18px;
+  place-items: center;
+  border: 1px solid rgba(232, 195, 123, 0.3);
+  border-radius: 50%;
+  color: var(--gold-light);
+  background: rgba(230, 193, 124, 0.06);
+  box-shadow: 0 0 30px rgba(225, 183, 103, 0.12);
+}
+
+.share-mark svg {
+  width: 22px;
+  height: 22px;
+}
+
+.share-kicker {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: 0.22em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.share-card h2 {
+  margin: 0;
+  color: #fbf4e7;
+  font-size: clamp(24px, 2.2vw, 31px);
+  font-weight: 760;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.share-desc {
+  margin: 11px 0 0;
+  color: #96a59b;
+  font-size: 11.5px;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+
+.share-games {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 17px;
+  color: #d8c49c;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+}
+
+.share-games span {
+  padding: 5px 9px;
+  border: 1px solid rgba(230, 193, 124, 0.14);
+  border-radius: 999px;
+  background: rgba(230, 193, 124, 0.045);
+}
+
+.share-games i {
+  color: rgba(230, 193, 124, 0.35);
+  font-style: normal;
+}
+
+.share-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.share-action {
+  display: flex;
+  width: 100%;
+  height: 43px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(240, 220, 180, 0.12);
+  border-radius: 11px;
+  color: #cbd5ce;
+  background: rgba(255, 255, 255, 0.033);
+  font-size: 10.5px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 160ms var(--ease-out),
+    border-color 160ms ease,
+    background 160ms ease,
+    filter 160ms ease;
+}
+
+.share-action svg {
+  width: 15px;
+  height: 15px;
+}
+
+.share-action:hover {
+  border-color: rgba(240, 220, 180, 0.24);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.share-action.primary {
+  border-color: rgba(255, 242, 210, 0.5);
+  color: #172019;
+  background: linear-gradient(135deg, #f3dda9, #d8ae66);
+  box-shadow:
+    0 10px 22px -13px rgba(226, 183, 99, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.48);
+}
+
+.share-action.primary:hover {
+  filter: brightness(1.05);
+}
+
+.share-action:active {
+  transform: scale(0.985);
+}
+
+.share-note {
+  margin: 15px 0 0;
+  color: var(--muted-dim);
+  font-size: 9px;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.share-note[data-tone="success"] {
+  color: #a8c6a4;
+}
+
+.share-path {
+  margin: 7px 0 0;
+  color: #69786e;
+  font-size: 8px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.share-path code {
+  color: #a9966f;
+  font-family: "Cascadia Code", "Consolas", monospace;
+  font-size: 8px;
+}
+
+.share-direct {
+  display: block;
+  width: fit-content;
+  margin: 8px auto 0;
+  color: #8fa99a;
+  font-size: 8.5px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: rgba(143, 169, 154, 0.35);
+  text-underline-offset: 3px;
+  transition: color 160ms ease;
+}
+
+.share-direct:hover {
+  color: var(--gold-light);
+}
+
+html[data-theme="black"] .share-layer {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.025), transparent 58%),
+    rgba(0, 0, 0, 0.8);
+}
+
+html[data-theme="black"] .share-card {
+  border-color: rgba(255, 255, 255, 0.13);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.04), transparent 44%),
+    linear-gradient(155deg, #1c1c1e, #101012);
+  box-shadow:
+    0 50px 110px -35px rgba(0, 0, 0, 0.98),
+    0 0 0 1px rgba(255, 255, 255, 0.016),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+html[data-theme="black"] .share-mark {
+  border-color: rgba(255, 255, 255, 0.13);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+@media (max-width: 520px) {
+  .share-layer {
+    padding: 12px;
+  }
+
+  .share-card {
+    max-height: 94svh;
+    padding: 22px 19px 18px;
+    border-radius: 22px;
+  }
+
+  .share-desc {
+    font-size: 11px;
+  }
+
+  .home-footer-actions {
+    display: none;
+  }
+}

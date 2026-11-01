@@ -1,3 +1,3 @@
-2026/10/31-15:39:40.219 4e30 Reusing MANIFEST E:\BlockPlayground\.appdata\Default\Local Storage\leveldb/MANIFEST-000001
-2026/10/31-15:39:40.259 4e30 Recovering log #3
-2026/10/31-15:39:40.269 4e30 Reusing old log E:\BlockPlayground\.appdata\Default\Local Storage\leveldb/000003.log 
+2026/10/31-21:58:01.803 2fdc Reusing MANIFEST E:\BlockPlayground\.appdata\Default\Local Storage\leveldb/MANIFEST-000001
+2026/10/31-21:58:01.842 2fdc Recovering log #3
+2026/10/31-21:58:01.853 2fdc Reusing old log E:\BlockPlayground\.appdata\Default\Local Storage\leveldb/000003.log 

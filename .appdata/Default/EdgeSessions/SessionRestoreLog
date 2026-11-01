@@ -6,3 +6,14 @@
 {"logTime": "1031/074824", "session": "END"}
 {"logTime": "1031/075233", "session": "START"}
 {"logTime": "1031/075239", "session": "END"}
+{"logTime": "1031/085720", "session": "START"}
+{"logTime": "1031/085931", "session": "END"}
+{"logTime": "1031/104635", "session": "START"}
+{"logTime": "1031/104700", "session": "START"}
+{"logTime": "1031/104729", "level": "INFO", "location": "components\\sessions\\core\\command_storage_manager.cc:275 operator()", "message": "Valid session file found: SessionRestore"}
+{"logTime": "1031/104729", "level": "INFO", "location": "components\\sessions\\core\\command_storage_manager.cc:275 operator()", "message": "Delete session file Session_13437906239707692, for SessionType SessionRestore"}
+{"logTime": "1031/110446", "session": "END"}
+{"logTime": "1031/133151", "session": "START"}
+{"logTime": "1031/133242", "session": "END"}
+{"logTime": "1031/135758", "session": "START"}
+{"logTime": "1031/135908", "session": "END"}
